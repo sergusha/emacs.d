@@ -51,7 +51,7 @@
     ("/home/sergusha/Org/house.org" "/home/sergusha/Org/itmo.org" "/home/sergusha/Org/work.org")))
  '(package-selected-packages
    (quote
-    (ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
+    (python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e")))
  '(revert-without-query (quote (".*")))
  '(scroll-conservatively 1)
@@ -168,7 +168,7 @@
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
+
 
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -178,6 +178,6 @@
 (force-utf8)
 (setup-custom-keys)
 (dumb-jump-mode)
-(add-hook 'emacs-startup-hook (lambda () (org-agenda nil "n")))
+
 
 
