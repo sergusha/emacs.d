@@ -6,7 +6,8 @@
 (package-initialize)
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives
+     '("melpa" . "http://melpa.org/packages/") t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -15,10 +16,10 @@
  '(ansi-color-names-vector
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(compilation-scroll-output t)
- '(custom-enabled-themes (quote (doom-gruvbox)))
+ '(custom-enabled-themes (quote (doom-tomorrow-night)))
  '(custom-safe-themes
    (quote
-    ("e7666261f46e2f4f42fd1f9aa1875bdb81d17cc7a121533cad3e0d724f12faf2" "c9ddf33b383e74dac7690255dd2c3dfa1961a8e8a1d20e401c6572febef61045" "2d392972cbe692ee4ac61dc79907af65051450caf690a8c4d36eb40c1857ba7d" "0fe9f7a04e7a00ad99ecacc875c8ccb4153204e29d3e57e9669691e6ed8340ce" "423435c7b0e6c0942f16519fa9e17793da940184a50201a4d932eafe4c94c92d" "a23f169b7909feaa53a0e7c08041aae663ef074fd1618103c09bf022a2ec1ee4" "9cb2ce95b651ec5cad605bcd097366d72731e9e096943e7a04cba860eb898dff" "728eda145ad16686d4bbb8e50d540563573592013b10c3e2defc493f390f7d83" "bf798e9e8ff00d4bf2512597f36e5a135ce48e477ce88a0764cfb5d8104e8163" "f589e634c9ff738341823a5a58fc200341b440611aaa8e0189df85b44533692b" "fefab1b6d3366a959c78b4ed154018d48f4ec439ce652f4748ef22945ca7c2d5" "c8f959fb1ea32ddfc0f50db85fea2e7d86b72bb4d106803018be1c3566fd6c72" "66d53738cc824d0bc5b703276975581b8de2b903d6ce366cd62207b5dd6d3d13" "d6f04b6c269500d8a38f3fabadc1caa3c8fdf46e7e63ee15605af75a09d5441e" "2a3ffb7775b2fe3643b179f2046493891b0d1153e57ec74bbe69580b951699ca" "071f5702a5445970105be9456a48423a87b8b9cfa4b1f76d15699b29123fb7d8" "2878517f049b28342d7a360fd3f4b227086c4be8f8409f32e0f234d129cee925" "f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "f951343d4bbe5a90dba0f058de8317ca58a6822faa65d8463b0e751a07ec887c" "332e009a832c4d18d92b3a9440671873187ca5b73c2a42fbd4fc67ecf0379b8c" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "70ed3a0f434c63206a23012d9cdfbe6c6d4bb4685ad64154f37f3c15c10f3b90" "36ca8f60565af20ef4f30783aa16a26d96c02df7b4e54e9900a5138fb33808da" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+    ("018c8326bced5102b4c1b84e1739ba3c7602019c645875459f5e6dfc6b9d9437" "38908037082b9fc2e6762961026299d026963e57c726c3bc0b9e66cd0def0926" "e7666261f46e2f4f42fd1f9aa1875bdb81d17cc7a121533cad3e0d724f12faf2" "c9ddf33b383e74dac7690255dd2c3dfa1961a8e8a1d20e401c6572febef61045" "2d392972cbe692ee4ac61dc79907af65051450caf690a8c4d36eb40c1857ba7d" "0fe9f7a04e7a00ad99ecacc875c8ccb4153204e29d3e57e9669691e6ed8340ce" "423435c7b0e6c0942f16519fa9e17793da940184a50201a4d932eafe4c94c92d" "a23f169b7909feaa53a0e7c08041aae663ef074fd1618103c09bf022a2ec1ee4" "9cb2ce95b651ec5cad605bcd097366d72731e9e096943e7a04cba860eb898dff" "728eda145ad16686d4bbb8e50d540563573592013b10c3e2defc493f390f7d83" "bf798e9e8ff00d4bf2512597f36e5a135ce48e477ce88a0764cfb5d8104e8163" "f589e634c9ff738341823a5a58fc200341b440611aaa8e0189df85b44533692b" "fefab1b6d3366a959c78b4ed154018d48f4ec439ce652f4748ef22945ca7c2d5" "c8f959fb1ea32ddfc0f50db85fea2e7d86b72bb4d106803018be1c3566fd6c72" "66d53738cc824d0bc5b703276975581b8de2b903d6ce366cd62207b5dd6d3d13" "d6f04b6c269500d8a38f3fabadc1caa3c8fdf46e7e63ee15605af75a09d5441e" "2a3ffb7775b2fe3643b179f2046493891b0d1153e57ec74bbe69580b951699ca" "071f5702a5445970105be9456a48423a87b8b9cfa4b1f76d15699b29123fb7d8" "2878517f049b28342d7a360fd3f4b227086c4be8f8409f32e0f234d129cee925" "f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "f951343d4bbe5a90dba0f058de8317ca58a6822faa65d8463b0e751a07ec887c" "332e009a832c4d18d92b3a9440671873187ca5b73c2a42fbd4fc67ecf0379b8c" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "70ed3a0f434c63206a23012d9cdfbe6c6d4bb4685ad64154f37f3c15c10f3b90" "36ca8f60565af20ef4f30783aa16a26d96c02df7b4e54e9900a5138fb33808da" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(fci-rule-color "#5c5e5e")
  '(global-yascroll-bar-mode t)
  '(hl-todo-keyword-faces
@@ -46,12 +47,9 @@
  '(make-backup-files nil)
  '(mouse-wheel-progressive-speed nil)
  '(objed-cursor-color "#cc6666")
- '(org-agenda-files
-   (quote
-    ("/home/sergusha/Org/house.org" "/home/sergusha/Org/itmo.org" "/home/sergusha/Org/work.org")))
  '(package-selected-packages
    (quote
-    (python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
+    (swiper-helm python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e")))
  '(revert-without-query (quote (".*")))
  '(scroll-conservatively 1)
@@ -93,7 +91,7 @@
 (when (fboundp 'tool-bar-mode) ;; Disable top bar
   (tool-bar-mode -1))
 
-(scroll-bar-mode -1)
+(toggle-scroll-bar -1)
 
 ;; show line numbers
 (global-linum-mode t)
@@ -111,7 +109,7 @@
 
 ;; Set default font
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "Fira Code"
                     :height 110
                     :weight 'normal
                     :width 'normal)
@@ -171,7 +169,7 @@
 
 
 (global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "M-x") 'counsel-M-x)
+;; (global-set-key (kbd "M-x") 'counsel-M-x)
 
 
 ;; final setup
