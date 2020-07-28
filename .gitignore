@@ -16,7 +16,7 @@ session*
 
 # flymake-mode
 *_flymake.*
-
+recentf
 # eshell files
 /eshell/history
 /eshell/lastdir
