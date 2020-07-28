@@ -1,3 +1,4 @@
+(server-start)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -49,7 +50,7 @@
  '(objed-cursor-color "#cc6666")
  '(package-selected-packages
    (quote
-    (swiper-helm python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
+    (exec-path-from-shell kubectx-mode kubernetes kubernetes-helm swiper-helm python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e")))
  '(revert-without-query (quote (".*")))
  '(scroll-conservatively 1)
@@ -104,6 +105,9 @@
 
 (doom-modeline-mode 1)
 
+;; magit bindings
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch)
 
 (setq company-tooltip-limit 20)
 
@@ -167,7 +171,12 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 
-
+;; k8s magit-like
+(use-package kubernetes
+  :ensure t
+  :commands (kubernetes-overview))
+(global-set-key (kbd "C-x k") 'kubernetes-overview)
+(global-set-key (kbd "C-x t") 'neotree-toggle)
 (global-set-key "\C-s" 'swiper)
 ;; (global-set-key (kbd "M-x") 'counsel-M-x)
 
@@ -176,6 +185,7 @@
 (force-utf8)
 (setup-custom-keys)
 (dumb-jump-mode)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
-
-
+(setq neo-theme 'ascii)
