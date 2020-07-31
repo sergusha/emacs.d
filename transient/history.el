@@ -4,4 +4,5 @@
  (magit-log
   (("--" ".gitlab-ci.yml")))
  (magit-pull nil)
- (magit-push nil))
+ (magit-push nil)
+ (magit-reset nil))
