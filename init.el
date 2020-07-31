@@ -48,7 +48,7 @@
  '(objed-cursor-color "#cc6666")
  '(package-selected-packages
    (quote
-    (dashboard restclient diffview diff-hl exec-path-from-shell kubectx-mode kubernetes kubernetes-helm swiper-helm python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
+    (projectile projectile-git-autofetch dashboard restclient diffview diff-hl exec-path-from-shell kubectx-mode kubernetes kubernetes-helm swiper-helm python-mode kotlin-mode groovy-mode ivy git-lens gitlab-ci-mode gitignore-templates gitignore-mode docker-compose-mode dockerfile-mode yaml-mode dumb-jump doom-modeline reverse-im yascroll use-package neotree all-the-icons doom-themes ample-theme spacemacs-theme company-terraform magit)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e")))
  '(revert-without-query (quote (".*")))
  '(scroll-conservatively 1)
@@ -225,7 +225,10 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook))
+;; projectile
 
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; ivy setup
 
