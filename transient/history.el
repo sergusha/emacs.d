@@ -10,7 +10,10 @@
   ("-n256" "--graph" "--decorate")
   (("--" ".gitlab-ci.yml")))
  (magit-merge nil)
- (magit-pull nil)
+ (magit-pull nil
+	     ("--rebase"))
  (magit-push nil
 	     ("--force"))
- (magit-reset nil))
+ (magit-rebase nil)
+ (magit-reset nil)
+ (magit-stash nil))

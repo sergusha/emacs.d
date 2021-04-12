@@ -1,2 +1,2 @@
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8 data ())
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8 data ())
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.800000011920929 data ("/Users/sergey.medvedev/Documents/journal/20210302" (3 2 2021)))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.800000011920929 data ("/Users/sergey.medvedev/Documents/journal/20210302" (24638 779 492110 993000)))
